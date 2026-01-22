@@ -6,7 +6,7 @@ public class Product {
     private int price; // 가격
     private String description; // 설명
     private int inventory; // 재고
-
+    private shoppingBasket basket = new shoppingBasket();
     // 생성자 초기화
     public Product(int id, String productName, int price, String description, int inventory) {
         this.id = id;
@@ -23,4 +23,9 @@ public class Product {
     public String getDescription() {return description;}
     public int getInventory() {return inventory;}
 
+    // 세터
+
+    public void setInventory(int inventory) {
+        this.inventory = inventory;
+    }
 }
