@@ -19,16 +19,9 @@ public class Category {
     public String getName() {return name;}
     public List<Product> getProducts() {return products;}
 
+    // 카테고리의 제품을 추가 (펩시, 스테비아 방울 토마토 등등...개별상품)
     public void addProduct(Product product){
         products.add(product);
     }
 
-    public void deductStock(int productId, int quantity) {
-        for (Product p : products) {
-            if (p.getId() == productId) {
-                p.setInventory(p.getInventory() - quantity);
-                return;
-            }
-        }
-    }
 }
